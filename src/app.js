@@ -1,0 +1,17 @@
+const express=require('express');
+const path=require('node:path');
+const logger=require('./middleware/logger');
+const app=express();
+app.disable('x-powered-by');
+app.use(express.json({limit:'100kb'}));
+app.use(logger);
+app.use(express.static(path.join(__dirname,'../public')));
+app.get('/api/health',(req,res)=>res.json({status:'ok',service:'ResearchOS API',timestamp:new Date().toISOString()}));
+app.use('/api/tasks',require('./routes/tasks'));
+app.use('/api/projects',require('./routes/projects'));
+app.use('/api/members',require('./routes/members'));
+app.use('/api/reviews',require('./routes/reviews'));
+app.use('/api/reports',require('./routes/reports'));
+app.use('/api',(req,res)=>res.status(404).json({error:'API endpoint not found.'}));
+app.use((err,req,res,next)=>{if(err instanceof SyntaxError && 'body' in err)return res.status(400).json({error:'Invalid JSON request body.'});console.error(err);res.status(500).json({error:'Internal server error.'});});
+module.exports=app;

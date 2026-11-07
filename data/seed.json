@@ -1,0 +1,195 @@
+{
+  "projects": [
+    {
+      "id": "prj-001",
+      "name": "Explainable AI for Medical Imaging",
+      "description": "A multicenter research workflow for explainable medical image classification.",
+      "owner": "Dr. Aylin Demir",
+      "status": "active",
+      "deadline": "2026-12-15",
+      "createdAt": "2026-10-01T09:00:00.000Z",
+      "updatedAt": "2026-10-01T09:00:00.000Z"
+    },
+    {
+      "id": "prj-002",
+      "name": "Optimization in Machine Learning",
+      "description": "Comparing optimizers across reproducible benchmark experiments.",
+      "owner": "Dr. Efe Kaya",
+      "status": "active",
+      "deadline": "2027-01-20",
+      "createdAt": "2026-10-02T09:00:00.000Z",
+      "updatedAt": "2026-10-02T09:00:00.000Z"
+    },
+    {
+      "id": "prj-003",
+      "name": "Scientific Literature Review",
+      "description": "Systematic review of trustworthy scientific AI.",
+      "owner": "Dr. Selin Aras",
+      "status": "planning",
+      "deadline": "2026-11-30",
+      "createdAt": "2026-10-03T09:00:00.000Z",
+      "updatedAt": "2026-10-03T09:00:00.000Z"
+    }
+  ],
+  "members": [
+    {
+      "id": "member-001",
+      "name": "Dr. Aylin Demir",
+      "email": "aylin@example.org",
+      "role": "Principal Investigator"
+    },
+    {
+      "id": "member-002",
+      "name": "Efe Kaya",
+      "email": "efe@example.org",
+      "role": "Researcher"
+    },
+    {
+      "id": "member-003",
+      "name": "Selin Aras",
+      "email": "selin@example.org",
+      "role": "Research Assistant"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-001",
+      "title": "Define experiment protocol",
+      "description": "Research workflow: define experiment protocol.",
+      "type": "experiment",
+      "status": "completed",
+      "priority": "high",
+      "projectId": "prj-001",
+      "assignee": "Dr. Aylin Demir",
+      "dueDate": "2026-10-09",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "updatedAt": "2026-10-01T10:00:00.000Z"
+    },
+    {
+      "id": "task-002",
+      "title": "Screen 40 journal articles",
+      "description": "Research workflow: screen 40 journal articles.",
+      "type": "literature",
+      "status": "in_progress",
+      "priority": "medium",
+      "projectId": "prj-003",
+      "assignee": "Selin Aras",
+      "dueDate": "2026-10-25",
+      "createdAt": "2026-10-02T10:00:00.000Z",
+      "updatedAt": "2026-10-02T10:00:00.000Z"
+    },
+    {
+      "id": "task-003",
+      "title": "Evaluate classification results",
+      "description": "Research workflow: evaluate classification results.",
+      "type": "analysis",
+      "status": "in_review",
+      "priority": "high",
+      "projectId": "prj-001",
+      "assignee": "Efe Kaya",
+      "dueDate": "2026-10-19",
+      "createdAt": "2026-10-03T10:00:00.000Z",
+      "updatedAt": "2026-10-03T10:00:00.000Z"
+    },
+    {
+      "id": "task-004",
+      "title": "Write methodology section",
+      "description": "Research workflow: write methodology section.",
+      "type": "manuscript",
+      "status": "todo",
+      "priority": "high",
+      "projectId": "prj-001",
+      "assignee": "Dr. Aylin Demir",
+      "dueDate": "2026-10-31",
+      "createdAt": "2026-10-04T10:00:00.000Z",
+      "updatedAt": "2026-10-04T10:00:00.000Z"
+    },
+    {
+      "id": "task-005",
+      "title": "Address reviewer 2 methodology comment",
+      "description": "Research workflow: address reviewer 2 methodology comment.",
+      "type": "revision",
+      "status": "in_progress",
+      "priority": "critical",
+      "projectId": "prj-001",
+      "assignee": "Efe Kaya",
+      "dueDate": "2026-10-18",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "updatedAt": "2026-10-05T10:00:00.000Z"
+    },
+    {
+      "id": "task-006",
+      "title": "Compare Adam and AdamW training curves",
+      "description": "Research workflow: compare adam and adamw training curves.",
+      "type": "experiment",
+      "status": "completed",
+      "priority": "medium",
+      "projectId": "prj-002",
+      "assignee": "Efe Kaya",
+      "dueDate": "2026-10-10",
+      "createdAt": "2026-10-06T10:00:00.000Z",
+      "updatedAt": "2026-10-06T10:00:00.000Z"
+    },
+    {
+      "id": "task-007",
+      "title": "Summarize optimization results",
+      "description": "Research workflow: summarize optimization results.",
+      "type": "analysis",
+      "status": "in_progress",
+      "priority": "medium",
+      "projectId": "prj-002",
+      "assignee": "Efe Kaya",
+      "dueDate": "2026-10-24",
+      "createdAt": "2026-10-07T10:00:00.000Z",
+      "updatedAt": "2026-10-07T10:00:00.000Z"
+    },
+    {
+      "id": "task-008",
+      "title": "Prepare manuscript submission",
+      "description": "Research workflow: prepare manuscript submission.",
+      "type": "manuscript",
+      "status": "todo",
+      "priority": "high",
+      "projectId": "prj-002",
+      "assignee": "Dr. Aylin Demir",
+      "dueDate": "2026-11-08",
+      "createdAt": "2026-10-08T10:00:00.000Z",
+      "updatedAt": "2026-10-08T10:00:00.000Z"
+    },
+    {
+      "id": "task-009",
+      "title": "Document inclusion criteria",
+      "description": "Research workflow: document inclusion criteria.",
+      "type": "literature",
+      "status": "in_review",
+      "priority": "medium",
+      "projectId": "prj-003",
+      "assignee": "Selin Aras",
+      "dueDate": "2026-10-21",
+      "createdAt": "2026-10-09T10:00:00.000Z",
+      "updatedAt": "2026-10-09T10:00:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-001",
+      "projectId": "prj-001",
+      "taskId": "task-005",
+      "reviewer": "Reviewer 2",
+      "comment": "Clarify the methodology and experimental setup.",
+      "status": "open",
+      "createdAt": "2026-10-11T10:00:00.000Z",
+      "updatedAt": "2026-10-11T10:00:00.000Z"
+    },
+    {
+      "id": "review-002",
+      "projectId": "prj-001",
+      "taskId": null,
+      "reviewer": "Reviewer 1",
+      "comment": "Add a robustness discussion.",
+      "status": "resolved",
+      "createdAt": "2026-10-10T10:00:00.000Z",
+      "updatedAt": "2026-10-12T10:00:00.000Z"
+    }
+  ]
+}

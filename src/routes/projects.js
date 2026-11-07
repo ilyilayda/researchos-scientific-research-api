@@ -1,0 +1,10 @@
+const router=require('express').Router();
+const store=require('../lib/store');
+const {validate,project,onlyFields}=require('../middleware/validate');
+const fields=['name','description','owner','status','deadline'];
+router.get('/',(req,res)=>res.json({data:store.read().projects}));
+router.get('/:id',(req,res)=>{const s=store.read(),p=s.projects.find(x=>x.id===req.params.id);return p?res.json({...p,taskCount:s.tasks.filter(t=>t.projectId===p.id).length}):res.status(404).json({error:'Project not found.'});});
+router.post('/',validate(project),onlyFields(fields),(req,res)=>res.status(201).json(store.create('projects',{status:'planning',...req.body})));
+router.put('/:id',validate(project),onlyFields(fields),(req,res)=>{const p=store.update('projects',req.params.id,req.body);return p?res.json(p):res.status(404).json({error:'Project not found.'});});
+router.delete('/:id',(req,res)=>{const s=store.read();if(s.tasks.some(t=>t.projectId===req.params.id)||s.reviews.some(r=>r.projectId===req.params.id))return res.status(409).json({error:'Project contains tasks or reviews. Remove them before deleting.'});const p=store.remove('projects',req.params.id);return p?res.json({message:'Project deleted.',data:p}):res.status(404).json({error:'Project not found.'});});
+module.exports=router;
